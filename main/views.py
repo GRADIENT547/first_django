@@ -4,14 +4,17 @@ from django.shortcuts import render
 
 def index(request):
     context: dict[str, str] = {
-        'title': 'Home',
-        'content': 'Главная страница магазина - HOME',
-        'list': ['first', 'second'],
-        'dict': {'first': 1},
-        'is_authenticated': True
+        'title': "Home - Главная",
+        'content': "Магазин мебели HOME"
     }
 
     return render(request, 'main/index.html', context)
 
 def about(request):
-    return HttpResponse('About page')
+    context: dict[str, str] = {
+        'title': "Home - О нас",
+        'content': "О нас",
+        'text_on_page': "Не следует, однако забывать, что новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. Повседневная практика показывает, что консультация с широким активом позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Повседневная практика показывает, что консультация с широким активом играет важную роль в формировании новых предложений. С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения направлений прогрессивного развития. "
+    }
+
+    return render(request, 'main/about.html', context)
