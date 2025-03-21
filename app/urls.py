@@ -22,7 +22,8 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
-    path('catalog/', include('goods.urls', namespace='goods'))
+    path('catalog/', include('goods.urls', namespace='goods')),
+    path('test/', include('testapp.urls', namespace='testapp'))
 ]
 
 '''
